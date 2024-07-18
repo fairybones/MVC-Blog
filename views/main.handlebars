@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MVC Blog</title>
+    <link rel="stylesheet" href="/public/stylesheets/style.css">
+</head>
+
+<body>
+    <div class="main-page">
+        <header>
+            <h1>
+                <a href="/">You are Here</a>
+            </h1>
+            <nav>
+                {{#if loggedIn}}
+                <a href="/homepage">dashboard</a>
+                <button id="logout" class="btn-no-style logout">logout</button>
+                {{else}}
+                <a href="/login">login</a>
+                {{/if}}
+            </nav>
+        </header>
+        <main>
+            {{{ body }}}
+        </main>
+    </div>
+
+    {{#if loggedIn}}
+    <script src="/public/logout.js"></script>
+    {{/if}}
+</body>
+
+</html>

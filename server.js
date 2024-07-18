@@ -9,7 +9,7 @@ const sequelize = require("./config/connection");
 const routes = require("./controllers");
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = 3001;
 
 // initialize dotenv for secure connection
 require("dotenv").config();

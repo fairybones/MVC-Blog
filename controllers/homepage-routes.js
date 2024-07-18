@@ -30,7 +30,7 @@ router.get('/', (req, res) => {
     const posts = dbPost.map(post => post.get({ plain: true }));
     res.render('homepage', {
         posts,
-        logginIn: req.session.loggedIn
+        loggedIn: req.session.loggedIn
     });
 })
 .catch(err => {
@@ -46,6 +46,15 @@ router.get('/login', (req, res) => {
         return;
     }
     res.render('login');
+});
+
+// route to signup form
+router.get('/signup', (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
+    res.render('signup');
 });
 
 // GET all blogposts by id

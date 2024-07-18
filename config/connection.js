@@ -4,26 +4,25 @@ const { Sequelize } = require("sequelize");
 require("dotenv").config();
 
 // initialize connection
-const sequelize = process.env.DB_URL
-  ? new Sequelize(process.env.DB_URL)
-  : new Sequelize(
-      process.env.DB_NAME,
-      process.env.DB_USER,
-      process.env.DB_PASSWORD,
-      {
-        host: "localhost",
-        dialect: "postgres",
-        port: "3001",
-      }
-    );
-// let sequelize = new Sequelize({
-//   user: "postgres",
-//   host: "localhost",
-//   database: "employees_db",
-//   password: "wOw111!",
-//   port: 3001,
-//   dialect: "postgres",
-// });
+// const sequelize = process.env.DB_URL
+//   ? new Sequelize(process.env.DB_URL)
+//   : new Sequelize(
+//       process.env.DB_NAME,
+//       process.env.DB_USER,
+//       process.env.DB_PASSWORD,
+//       {
+//         host: "localhost",
+//         dialect: "postgres",
+//         port: "5432",
+//       }
+//     );
+let sequelize = new Sequelize({
+  dialect: "postgres",
+  port: 5432,
+  database: 'blog_db',
+  username: 'postgres',
+  password: 'wOw111!'
+});
 
 // Test the connection
 sequelize
