@@ -18,10 +18,10 @@ require("dotenv").config();
 //     );
 let sequelize = new Sequelize({
   dialect: "postgres",
-  port: 5432,
-  database: 'blog_db',
-  username: 'postgres',
-  password: 'wOw111!'
+  port: 3001,
+  database: "blog_db",
+  username: "postgres",
+  password: "wOw111!",
 });
 
 // Test the connection
