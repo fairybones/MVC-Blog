@@ -11,7 +11,7 @@
 
 
 ## Description
-Module 14 Challenge: A full stack CMS-style blog site that utilizes model-view-controller architecture
+Module 14 Challenge: A full stack CMS-style blog site fulfilled by Handlebars as a template engine, Tailwind CSS for styling components, & utilizes model-view-controller architecture
 
 ## Installation
 In order to install the necessary packages, please use npm i
