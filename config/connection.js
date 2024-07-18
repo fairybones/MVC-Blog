@@ -13,7 +13,7 @@ const sequelize = process.env.DB_URL
       {
         host: "localhost",
         dialect: "postgres",
-        port: "5432",
+        port: "3001",
       }
     );
 // let sequelize = new Sequelize({
